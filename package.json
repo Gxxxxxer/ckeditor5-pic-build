@@ -1,5 +1,5 @@
 {
-  "name": "ckeditor5-pic-build",
+  "name": "ckeditor5-pc-build",
   "author": "CKSource",
   "description": "A custom CKEditor 5 build made by the CKEditor 5 online builder.",
   "version": "0.0.1",
@@ -7,6 +7,9 @@
   "private": true,
   "main": "./build/ckeditor.js",
   "types": "./build/ckeditor.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
     "@ckeditor/ckeditor5-alignment": "^41.4.2",
     "@ckeditor/ckeditor5-autoformat": "41.4.2",

@@ -1,0 +1,50 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.2.3
+2 info using node@v20.10.0
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 1ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 0ms
+6 timing config:load:builtin Completed in 1ms
+7 timing config:load:cli Completed in 1ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:/Users/versha/work/ckeditor5-pic-build/.npmrc Completed in 2ms
+10 timing config:load:project Completed in 2ms
+11 timing config:load:file:/Users/versha/.npmrc Completed in 1ms
+12 timing config:load:user Completed in 1ms
+13 timing config:load:file:/usr/local/etc/npmrc Completed in 0ms
+14 timing config:load:global Completed in 0ms
+15 timing config:load:setEnvs Completed in 0ms
+16 timing config:load Completed in 8ms
+17 timing npm:load:configload Completed in 8ms
+18 timing config:load:flatten Completed in 2ms
+19 timing npm:load:mkdirpcache Completed in 0ms
+20 timing npm:load:mkdirplogs Completed in 0ms
+21 verbose title npm adduser
+22 verbose argv "adduser"
+23 timing npm:load:setTitle Completed in 20ms
+24 timing npm:load:display Completed in 0ms
+25 verbose logfile logs-max:10 dir:/Users/versha/work/ckeditor5-pic-build/"~/.npm"/_logs/2024-05-24T09_19_40_687Z-
+26 verbose logfile /Users/versha/work/ckeditor5-pic-build/"~/.npm"/_logs/2024-05-24T09_19_40_687Z-debug-0.log
+27 timing npm:load:logFile Completed in 7ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 59ms
+31 verbose stack TypeError: Invalid URL
+31 verbose stack     at new URL (node:internal/url:775:36)
+31 verbose stack     at module.exports (/usr/local/lib/node_modules/npm/node_modules/@npmcli/config/lib/nerf-dart.js:13:18)
+31 verbose stack     at Config.validate (/usr/local/lib/node_modules/npm/node_modules/@npmcli/config/lib/index.js:424:29)
+31 verbose stack     at new BaseCommand (/usr/local/lib/node_modules/npm/lib/base-command.js:85:14)
+31 verbose stack     at new adduser (/usr/local/lib/node_modules/npm/lib/commands/adduser.js:7:1)
+31 verbose stack     at Npm.setCmd (/usr/local/lib/node_modules/npm/lib/npm.js:93:21)
+31 verbose stack     at Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:112:26)
+31 verbose stack     at module.exports (/usr/local/lib/node_modules/npm/lib/cli-entry.js:61:15)
+32 verbose cwd /Users/versha/work/ckeditor5-pic-build
+33 verbose Darwin 21.6.0
+34 verbose node v20.10.0
+35 verbose npm  v10.2.3
+36 error code ERR_INVALID_URL
+37 error Invalid URL
+38 verbose exit 1
+39 timing npm Completed in 142ms
+40 verbose code 1
+41 error A complete log of this run can be found in: /Users/versha/work/ckeditor5-pic-build/"~/.npm"/_logs/2024-05-24T09_19_40_687Z-debug-0.log
