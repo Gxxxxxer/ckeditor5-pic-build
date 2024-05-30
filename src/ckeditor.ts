@@ -4,7 +4,7 @@
  */
 
 // The editor creator to use.
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { ClassicEditor as Base } from '@ckeditor/ckeditor5-editor-classic';
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
@@ -51,7 +51,8 @@ import { SpecialCharacters, SpecialCharactersArrows, SpecialCharactersCurrency, 
 //表格类
 import { Table, TableToolbar, TableCellProperties, TableProperties } from '@ckeditor/ckeditor5-table';
 
-export default class Editor extends ClassicEditor {
+
+export default class ClassicEditor extends Base {
   public static override builtinPlugins = [
     //基础
     BlockQuote,

@@ -2,7 +2,7 @@
  * @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
-import { ClassicEditor } from '@ckeditor/ckeditor5-editor-classic';
+import { ClassicEditor as Base } from '@ckeditor/ckeditor5-editor-classic';
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
@@ -32,7 +32,7 @@ import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageUpload, ImageInsert
 import { Link, LinkImage } from '@ckeditor/ckeditor5-link';
 import { SpecialCharacters, SpecialCharactersArrows, SpecialCharactersCurrency, SpecialCharactersEssentials, SpecialCharactersLatin, SpecialCharactersMathematical, SpecialCharactersText } from '@ckeditor/ckeditor5-special-characters';
 import { Table, TableToolbar, TableCellProperties, TableProperties } from '@ckeditor/ckeditor5-table';
-export default class Editor extends ClassicEditor {
+export default class ClassicEditor extends Base {
     static builtinPlugins: (typeof BlockQuote | typeof Bold | typeof Code | typeof Essentials | typeof Italic | typeof Strikethrough | typeof Subscript | typeof Superscript | typeof Underline | typeof Alignment | typeof Clipboard | typeof CodeBlock | typeof CloudServices | typeof FindAndReplace | typeof Font | typeof Heading | typeof Highlight | typeof HorizontalLine | typeof Link | typeof RemoveFormat | typeof SourceEditing | typeof PageBreak | typeof PasteFromOffice | typeof Paragraph | typeof WordCount | typeof Indent | typeof IndentBlock | typeof List | typeof ListProperties | typeof TodoList | typeof Image | typeof ImageCaption | typeof ImageInsert | typeof ImageResize | typeof ImageStyle | typeof ImageToolbar | typeof ImageUpload | typeof LinkImage | typeof Table | typeof TableToolbar | typeof TableProperties | typeof TableCellProperties | typeof EasyImage | typeof MediaEmbed | typeof SpecialCharacters | typeof SpecialCharactersArrows | typeof SpecialCharactersCurrency | typeof SpecialCharactersEssentials | typeof SpecialCharactersLatin | typeof SpecialCharactersMathematical | typeof SpecialCharactersText | typeof Autoformat | typeof TextTransformation)[];
     static defaultConfig: EditorConfig;
 }
