@@ -10,7 +10,7 @@ import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
 // import { CKFinder } from '@ckeditor/ckeditor5-ckfinder';
 import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
-import { Heading } from '@ckeditor/ckeditor5-heading';
+import { Heading, Title } from '@ckeditor/ckeditor5-heading';
 
 import type { EditorConfig } from '@ckeditor/ckeditor5-core';
 
@@ -50,6 +50,8 @@ import { SpecialCharacters, SpecialCharactersArrows, SpecialCharactersCurrency, 
 
 //表格类
 import { Table, TableToolbar, TableCellProperties, TableProperties } from '@ckeditor/ckeditor5-table';
+
+// import InsertOtherPlugin from "./insert"
 
 
 export default class ClassicEditor extends Base {
@@ -118,6 +120,7 @@ export default class ClassicEditor extends Base {
     Autoformat,
 
     TextTransformation,
+    // Title
 
   ];
 
@@ -140,7 +143,8 @@ export default class ClassicEditor extends Base {
         'insertTable',
         'mediaEmbed',
         'undo',
-        'redo'
+        'redo',
+        'insertOther'
       ]
     },
     image: {
