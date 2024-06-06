@@ -14,10 +14,9 @@ import { Heading, Title } from '@ckeditor/ckeditor5-heading';
 
 import type { EditorConfig } from '@ckeditor/ckeditor5-core';
 
-
 import { MediaEmbed } from '@ckeditor/ckeditor5-media-embed';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
-import { PasteFromOffice}  from '@ckeditor/ckeditor5-paste-from-office';
+import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
 
 import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
@@ -43,16 +42,31 @@ import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
 //列表类
 import { List, ListProperties, TodoList } from '@ckeditor/ckeditor5-list';
 //图片类
-import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageUpload, ImageInsert, ImageResize } from '@ckeditor/ckeditor5-image';
+import {
+  Image,
+  ImageCaption,
+  ImageStyle,
+  ImageToolbar,
+  ImageUpload,
+  ImageInsert,
+  ImageResize,
+} from '@ckeditor/ckeditor5-image';
 import { AutoLink, Link, LinkImage } from '@ckeditor/ckeditor5-link';
 //特殊符号类
-import { SpecialCharacters, SpecialCharactersArrows, SpecialCharactersCurrency, SpecialCharactersEssentials, SpecialCharactersLatin, SpecialCharactersMathematical, SpecialCharactersText } from '@ckeditor/ckeditor5-special-characters';
+import {
+  SpecialCharacters,
+  SpecialCharactersArrows,
+  SpecialCharactersCurrency,
+  SpecialCharactersEssentials,
+  SpecialCharactersLatin,
+  SpecialCharactersMathematical,
+  SpecialCharactersText,
+} from '@ckeditor/ckeditor5-special-characters';
 
 //表格类
 import { Table, TableToolbar, TableCellProperties, TableProperties } from '@ckeditor/ckeditor5-table';
 
-// import InsertOtherPlugin from "./insert"
-
+import PreserveIdAttrPlugin from './preserveIdAttrPlugin';
 
 export default class ClassicEditor extends Base {
   public static override builtinPlugins = [
@@ -120,8 +134,9 @@ export default class ClassicEditor extends Base {
     Autoformat,
 
     TextTransformation,
+    PreserveIdAttrPlugin,
+    // PreserveSpanPlugin,
     // Title
-
   ];
 
   public static override defaultConfig: EditorConfig = {
@@ -144,8 +159,8 @@ export default class ClassicEditor extends Base {
         'mediaEmbed',
         'undo',
         'redo',
-        'insertOther'
-      ]
+        'insertOther',
+      ],
     },
     image: {
       toolbar: [
@@ -154,19 +169,13 @@ export default class ClassicEditor extends Base {
         'imageStyle:side',
         '|',
         'toggleImageCaption',
-        'imageTextAlternative'
-      ]
+        'imageTextAlternative',
+      ],
     },
     table: {
-      contentToolbar: [
-        'tableColumn',
-        'tableRow',
-        'mergeTableCells'
-      ]
+      contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells'],
     },
     // This value must be kept in sync with the language defined in webpack.config.js.
-    language: 'zh-cn'
+    language: 'zh-cn',
   };
 }
-
-
